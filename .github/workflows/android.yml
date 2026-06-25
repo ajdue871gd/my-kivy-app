@@ -9,6 +9,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Free Disk Space
+        uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          tool-cache: true
+          android: false
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -29,9 +35,3 @@ jobs:
         with:
           name: package
           path: bin/*.apk
-          - name: Free Disk Space
-  uses: jlumbroso/free-disk-space@v1.3.1
-  with:
-    tool-cache: true
-    android: false # не удаляйте Android SDK, он нужен
-
