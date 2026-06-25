@@ -11,3 +11,5 @@ osx.kivy_version = 2.1.0
 fullscreen = 0
 android.archs = armeabi-v7a, arm64-v8a
 android.allow_backup = True
+android.accept_sdk_license = True
+android.skip_update = False
