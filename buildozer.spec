@@ -13,3 +13,4 @@ android.archs = armeabi-v7a, arm64-v8a
 android.allow_backup = True
 android.accept_sdk_license = True
 android.skip_update = False
+log_level = 1
