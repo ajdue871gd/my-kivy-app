@@ -4,10 +4,28 @@ on: [push, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - name: Get Buildozer Action
-        uses: ArtemGovorov/buildozer-action@v1
-        with:
-          command: buildozer -v android debug
 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libsqlite3-dev lldd openjdk-17-jdk shared-mime-info
+          pip install --upgrade pip
+          pip install buildozer cython virtualenv
+
+      - name: Build with Buildozer
+        run: buildozer android debug
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: package
+          path: bin/*.apk
