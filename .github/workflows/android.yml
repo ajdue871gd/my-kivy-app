@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libsqlite3-dev lldd openjdk-17-jdk shared-mime-info
+          sudo apt-get install -y libsqlite3-dev lld openjdk-17-jdk shared-mime-info
           pip install --upgrade pip
           pip install buildozer cython virtualenv
 
