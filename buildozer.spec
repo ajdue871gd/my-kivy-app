@@ -19,3 +19,4 @@ android.boot_service = myservice
 log_level = 2
 # (int) Android NDK version to use
 android.ndk = 26b
+p4a.branch = develop
