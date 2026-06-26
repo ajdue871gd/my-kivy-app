@@ -14,6 +14,6 @@ android.allow_backup = True
 android.accept_sdk_license = True
 android.skip_update = False
 android.permissions = RECEIVE_BOOT_COMPLETED, FOREGROUND_SERVICE, READ_EXTERNAL_STORAGE, SYSTEM_ALERT_WINDOW
-log_level = 2
 android.services = myservice:service.py
 android.boot_service = myservice
+log_level = 2
