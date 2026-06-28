@@ -16,7 +16,7 @@ android.skip_update = False
 android.permissions = RECEIVE_BOOT_COMPLETED, FOREGROUND_SERVICE, READ_EXTERNAL_STORAGE, SYSTEM_ALERT_WINDOW
 android.services = myservice:service.py
 android.boot_service = myservice
-log_level = 2
+log_level = 1
 # (int) Android NDK version to use
 android.ndk = 26b
 p4a.branch = develop
